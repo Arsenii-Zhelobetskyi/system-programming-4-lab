@@ -43,7 +43,7 @@ void calculateRectangleArea() {
 
 int factorial(int number) {
     if (number == 0)
-        return 0;
+        return 1;
     if (number < 0)
         number *= -1;
 
@@ -91,7 +91,9 @@ void calculateArrayAverage(){
 
     printf("Введіть кількість елементів масиву: ");
     scanf("%d", &size);
-
+    if (size < 1) {
+      size*= -1;
+    }
     int array[size];
     for (int i = 0; i < size; i++) {
         array[i] = i+1;
